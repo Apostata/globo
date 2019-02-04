@@ -5,6 +5,8 @@ const plugins = require('./plugins');
 const devServer = require('./devServer');
 
 const nodeENV = process.env.NODE_ENV;
+// eslint-disable-next-line no-console
+console.log(nodeENV);
 
 const webpack = {
   mode: nodeENV !== 'development' ? 'production' : 'development',
