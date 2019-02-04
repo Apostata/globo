@@ -1,0 +1,38 @@
+@import '../config/color';
+
+.header-wrapper{
+  background: $azul-medio;
+  display: flex;
+  align-items: center;
+
+  .header-wrapper__menu-btn{
+    color: $branco;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .header-wrapper__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+
+    img{
+      display: block;
+      max-width: 70%;
+    }
+
+    .header-wrapper__logo__squares{
+      margin-left: 10px;
+
+      .fa-square{
+        display: block;
+        color: $amarelo-medio;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+}

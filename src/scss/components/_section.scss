@@ -1,0 +1,58 @@
+@import '../config/color';
+@import '../config/variables';
+
+
+.section{
+  padding: 15px 0;
+
+  .section__title{
+    font-size: 2rem;
+    color: $azul-medio;
+    text-transform: uppercase;
+  }
+
+  .section__divisor{
+    border: 1px solid $cinza-claro;
+    border-left: none;
+    border-right: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    text-align: right;
+
+    .section__divisor__loadMore{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 1.5rem;
+      color: $azul-medio;
+      margin-right: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover{
+        color: lighten($azul-medio, 15%)
+      }
+
+      i{
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .row.primary{
+    padding-top: 15px;
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      padding-top: 0px;
+    }
+  }
+  &.main{
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      padding-top: 0px;
+    }
+  }
+}
+
+@import 'article';

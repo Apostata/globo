@@ -1,7 +1,5 @@
 @import 'base';
-
-
-$color: #0ff;
-body {
-  background: $color;
-}
+@import 'components/header';
+@import 'components/advertising';
+@import 'components/section';
+@import 'components/footer';

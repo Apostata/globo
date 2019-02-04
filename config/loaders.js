@@ -4,7 +4,8 @@ const fontLoader = require('./loaders/fontLoader');
 
 const loaders = [];
 loaders.push(jsLoader);
-loaders.push(cssLoader);
 loaders.push(fontLoader);
+loaders.push(cssLoader);
+
 
 module.exports = loaders;

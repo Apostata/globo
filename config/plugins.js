@@ -14,13 +14,4 @@ module.exports = [
     filename: './css/[name].css',
     chunkFilename: './css/[name].css',
   }),
-
-  new HtmlWebpackPlugin({
-    meta: {
-      viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-    },
-    template: '../htdocs/index.html',
-    title: 'Link\'s Journal',
-    inject: true,
-  }),
 ];

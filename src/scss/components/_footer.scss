@@ -1,0 +1,53 @@
+@import '../config/color';
+@import '../config/variables';
+
+
+
+.footer-wrapper{
+  background: $amarelo-medio;
+  display: flex;
+  align-items: center;
+
+  .footer-wrapper__logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+
+    img{
+      display: block;
+      max-width: 130px;
+    }
+
+    .footer-wrapper__logo__squares{
+      margin-left: 10px;
+
+        .fa-square{
+          font-size: 0.5rem;
+          display: block;
+          color: $branco;
+          margin-bottom: 5px;
+        }
+    }
+  }
+
+
+  .footer-wrapper__copy{
+    padding-top: 15px;
+    text-align: right;
+    padding-bottom: 0px;
+
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      padding-bottom: 15px;
+      background: $azul-medio;
+      text-align: center;
+      color:$branco;
+    }
+
+    p{
+      text-transform: uppercase;
+      margin-bottom: 0;
+      font-size: 0.7rem;
+    }
+  }
+}

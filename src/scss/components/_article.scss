@@ -1,0 +1,211 @@
+@import '../config/color';
+@import '../config/variables';
+
+.article{
+  padding-top: 15px;
+  transition: background-color 300ms ease-in-out 0ms;
+  position: relative;
+
+  &:hover{
+    .article__title, .article__desc{
+      color: lighten($azul-medio, 15%);
+    }
+  }
+
+  .article__title, .article__desc{
+    transition: color 300ms ease-in-out 0ms;
+  }
+
+  .article__image{
+    img{
+      max-width: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .article__label{
+    display: block;
+    padding-top: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .article__ver{
+    color: $preto;
+    font-size: 1.5rem;
+
+    &:hover{
+      color: $azul-medio;
+    }
+  }
+
+  .article__data__body{
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+}
+
+.primary{
+  .article{
+    position: relative;
+
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      padding-top: 0;
+    }
+
+    .article__label{
+      margin-bottom: 0;
+      @media screen and (max-width: map-get($screen-sizes, 'md')){
+        margin-bottom: initial;
+        color: $azul-medio;
+      }
+    }
+
+    .article__image{
+      @media screen and (max-width: map-get($screen-sizes, 'md')){
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+
+      img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .article__data__title{
+      position: absolute;
+    }
+
+    .article__data__title{
+      bottom: 75px;
+      left: 0px;
+      width: 100%;
+      color: $branco;
+      box-sizing: border-box;
+      padding: 0 30px;
+
+      @media screen and (max-width: map-get($screen-sizes, 'md')){
+        color: $preto;
+        left: initial;
+        bottom: initial;
+        padding: initial;
+        position: initial;
+      }
+    }
+
+    .article__data__body{
+      color: $branco;
+      .article__desc, .article__ver{
+        position: absolute;
+      }
+
+      .article__desc{
+        bottom: 15px;
+        left: 0px;
+        width: 100%;
+        min-height: 50px;
+        max-height: 50px;
+        box-sizing: border-box;
+        padding: 0 30px;
+
+        @media screen and (max-width: map-get($screen-sizes, 'md')){
+          position: initial;
+          padding: initial;
+          min-height: initial;
+          max-height: initial;
+          color: $preto;
+        }
+      }
+
+      .article__ver{
+        color: $branco;
+        top: 30px;
+        right: 30px;
+        width: 50px;
+        box-sizing: border-box;
+        padding: 0 30px;
+      }
+    }
+
+  }
+}
+
+.secondary{
+  .article{
+    .article__image{
+      img{
+        min-height: 216px;
+        width: 100%;
+
+        @media screen and (max-width: map-get($screen-sizes, 'md')){
+          min-height: initial;
+        }
+      }
+
+      @media screen and (max-width: map-get($screen-sizes, 'md')){
+        padding-bottom: 60px;
+      }
+    }
+
+    .article__data__title, .article__data__body{
+      padding-left: 15px;
+    }
+
+    & > *{
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+    }
+  }
+
+  .article__ver{
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      margin-left: -30px;
+    }
+  }
+}
+
+.commons{
+  .article{
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      flex-flow: row wrap;
+      display: flex;
+    }
+    .article__label{
+      color: $azul-medio;
+    }
+
+    .article__image, .article__data__title{
+      @media screen and (max-width: map-get($screen-sizes, 'md')){
+        width: 50%;
+        flex: 0 0 50%;
+        box-sizing: border-box;
+
+      }
+    }
+
+    .article__data__title{
+      @media screen and (max-width: map-get($screen-sizes, 'md')){
+        padding-left: 15px;
+      }
+    }
+
+    .article__data__body{
+      @media screen and (max-width: map-get($screen-sizes, 'md')){
+        width: 100%;
+        flex: 0 0 100%;
+        padding-top: 10px;
+      }
+    }
+  }
+}

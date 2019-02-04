@@ -1,0 +1,39 @@
+@import '../config/color';
+@import '../config/variables';
+
+.advertising-wrapper{
+  background: $cinza-claro;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: map-get($screen-sizes, 'md')){
+    padding: 0;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+      padding: 0;
+    }
+  }
+
+  .advertising__banner{
+    border: 1px solid $cinza-escuro;
+    background: $cinza-medio;
+    width: 100%;
+    height: auto;
+    max-width: 728px;
+    min-height: 90px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+
+    @media screen and (max-width: map-get($screen-sizes, 'md')){
+     // max-width: 320px;
+      min-height: 100px;
+    }
+  }
+}
