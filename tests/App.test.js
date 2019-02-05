@@ -52,7 +52,13 @@ const rowMarkup = `
 
 const containerMarkup = `
 <div class="container">
+  <h2 class="section__title">${section.name}</h2>
   ${rowMarkup}
+</div>
+<div class="row">
+  <div class="col col-12 section__divisor">
+    <a class="section__divisor__loadMore" href="#">${section.name}<i class="fas fa-plus"></i></a>
+  </div>
 </div>
 `;
 
@@ -141,7 +147,26 @@ describe('App', () => {
     div.appendChild(element);
 
     it('Should render correct data given data', () => {
-      const finalMarkup =`
+      const finalMarkup = `
+      <div id="advertising">
+        <section class="section name">
+          ${containerMarkup}
+        </section>
+      </div>
+      `;
+      app.renderSection(section, element, position);
+      expect(div.innerHTML.replace(/\s/g, '')).to.be.eql(finalMarkup.replace(/\s/g, ''));
+    });
+  });
+
+  describe('renderSection', () => {
+    const div = document.createElement('div');
+    const element = document.createElement('div');
+    element.setAttribute('id', 'advertising');
+    div.appendChild(element);
+
+    it('Should render correct data given data', () => {
+      const finalMarkup = `
       <div id="advertising">
         <section class="section name">
           ${containerMarkup}

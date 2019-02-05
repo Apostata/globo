@@ -6,11 +6,33 @@ export default class App {
     return fetch('/json').then(data => data.json());
   }
 
+  setClickOnMore() {
+    document.addEventListener('click', (event) => {
+      if (!event.target.classList.contains('section__divisor__loadMore')) return;
+      event.stopPropagation();
+      event.preventDefault();
+      // eslint-disable-next-line no-console
+      const hideRow = event.target.parentNode.parentNode.parentNode.querySelector('.hide');
+      if (hideRow) {
+        hideRow.classList.remove('hide');
+      }
+    }, false);
+  }
+
   renderContainer(section) {
+    const secName = section.name;
     return `
     <div class="container">
+      ${secName !== 'main' ? `<h2 class="section__title">${secName}</h2>` : ''}
       ${this.renderRow(section)}
     </div>
+    ${secName !== 'main' ? `
+      <div class="row">
+        <div class="col col-12 section__divisor">
+          <a class="section__divisor__loadMore" href="#">${secName}<i class="fas fa-plus"></i></a>
+        </div>
+      </div>
+      ` : ''}
     `;
   }
 
@@ -66,7 +88,6 @@ export default class App {
         <div class="row ${rowType}">
         ${this.renderArticle(article, rowType)}
         `;
-
       }
 
       return `${this.renderArticle(article, rowType)}`;
@@ -75,7 +96,7 @@ export default class App {
 
   renderArticle(article, rowType) {
     return `
-    <article class="col col-12 ${rowType === 'commons' ? 'col-md-3' : 'col-md-6'} article">
+    <article class="col col-12 ${rowType === 'commons' || rowType === 'commons hide' ? 'col-md-3' : 'col-md-6'} article">
       <div class="article__image">
         <img src="assets/media/${article.image}"  alt="nome">
       </div>
@@ -105,6 +126,9 @@ export default class App {
         return 'commons';
       }
       return 'primary';
+    }
+    if (line >= 5) {
+      return 'commons hide';
     }
     return 'commons';
   }

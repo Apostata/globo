@@ -15,4 +15,5 @@ app.getData().then((data) => {
     beforeOrAfter = section.name === 'main' ? 'beforebegin' : 'afterend';
     app.renderSection(section, element, beforeOrAfter);
   });
+  app.setClickOnMore();
 });

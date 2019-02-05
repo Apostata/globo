@@ -48,6 +48,19 @@
       padding-top: 0px;
     }
   }
+
+  .row.commons{
+    transition: visibility 1ms linear 0ms, max-height 300ms linear 1ms, opacity 300ms linear 1ms;
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .row.hide{
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+
   &.main{
     @media screen and (max-width: map-get($screen-sizes, 'md')){
       padding-top: 0px;
