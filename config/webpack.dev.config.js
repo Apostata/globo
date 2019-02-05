@@ -26,7 +26,6 @@ const webpack = {
   },
   plugins,
   devServer,
-  watch: true,
 };
 
 module.exports = webpack;
