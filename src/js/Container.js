@@ -41,9 +41,9 @@ export default class Container extends Component {
     }
 
     const addMore = (
-      <div className="row">
-        <div className="col col-12 section__divisor">
-          <a className="section__divisor__loadMore" href="#" onClick={(e)=>this.loadMore(e)}>{name}<i className="fas fa-plus"></i></a>
+      <div className = "row">
+        <div className = "col col-12 section__divisor">
+          <a className =" section__divisor__loadMore" href="#" onClick={(e)=>this.loadMore(e)}>{name}<i className="fas fa-plus"></i></a>
         </div>
       </div>
     );

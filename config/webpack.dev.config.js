@@ -16,7 +16,7 @@ const webpack = {
   },
 
   output: {
-    filename: 'js/[name].js',
+    filename: 'scripts/[name].js',
     path: path.resolve(__dirname, '../htdocs/assets'),
     publicPath: 'assets/',
   },
