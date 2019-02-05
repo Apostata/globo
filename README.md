@@ -1,4 +1,4 @@
-# Quer trabalhar em nosso time de frontend? 
+# Quer trabalhar em nosso time de frontend?
 
 Esse é o nosso desafio para você!
 O objetivo é avaliar o seu conhecimento e habilidades nos seguintes quesitos:
@@ -6,13 +6,15 @@ O objetivo é avaliar o seu conhecimento e habilidades nos seguintes quesitos:
 * Markup
 * Estilização (stylesheet/css)
 * Javascript
+# Setup Rene
 
-# Setup
-
-* Faça um fork do projeto para a sua conta e clone-o para o seu ambiente de trabalho;
-* Instale as dependências com `npm install`
-* Rode a aplicação com `npm start`
+* dependencias instaladas com yarn, `yarn install`
+* O projeto está com 2 branchs `vanilla`, com javascript puro e `react`
+* Rode a aplicação com `yarn start`
 * A aplicação estará acessível através do endereço http://localhost:3000/
+
+## testes
+* Rode a testes com  `yarn test` (por enquanto só na branch `vanilla`)
 
 # Instruções
 
