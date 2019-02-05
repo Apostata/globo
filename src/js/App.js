@@ -12,8 +12,9 @@ export default class App extends Component {
       data,
     }));
   }
+
   render() {
-    const data = this.state.data;
+    const { data } = this.state;
     const renderSections = (sections) => {
       return sections.map((section, idx) =><Section key={idx} {...section} />);
       // console.log(sections);

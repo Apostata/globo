@@ -5,6 +5,7 @@ const row = (props) => {
   let classes = 'row ';
   let bootsClass = 'col-md-6';
 
+
   if (props.classe === 'main') {
     switch (props.idx) {
       case 0 :
@@ -20,7 +21,10 @@ const row = (props) => {
     }
   } else {
     classes += 'commons ';
-    classes += props.idx > 0 ? 'hide' : '';
+
+    if (props.idx > 0) {
+      classes +=  props.isVisible;
+    }
     bootsClass = 'col-md-3';
   }
 

@@ -17,7 +17,8 @@ module.exports = {
         "import/no-extraneous-dependencies":
         ["error", {
             "devDependencies": true},
-        ]
+        ],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     },
     "plugins": [ // to work with chai
       "chai-friendly"

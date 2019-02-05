@@ -1,9 +1,6 @@
 import React from 'react';
 
 const article = (props) => {
-  let classes = 'row ';
-
-  console.log(props)
 
   return (
     <article className={`col col-12 ${props.classe} article`}>
@@ -20,7 +17,7 @@ const article = (props) => {
         <p className="article__desc">
             {props.description}
         </p>
-        <a className="article__ver" href={props.url}>
+        <a className="article__ver" href={props.url} >
           <i className="fas fa-share-square"></i>
         </a>
       </div>
