@@ -2,6 +2,7 @@ import React from 'react';
 import { configure, shallow, render} from 'enzyme';
 import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';
+import 'jsdom-global/register';
 import fetch from 'node-fetch';
 import Adapter from 'enzyme-adapter-react-16';
 import chaiEnzyme from 'chai-enzyme';
