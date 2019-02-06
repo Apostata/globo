@@ -16,8 +16,8 @@ const webpack = {
   },
 
   output: {
-    filename: 'js/[name].js',
-    path: path.resolve(__dirname, '../htdocs'),
+    filename: 'scripts/[name].js',
+    path: path.resolve(__dirname, '../htdocs/assets'),
     publicPath: 'assets/',
   },
   devtool: nodeENV === 'production' ? 'source-map' : 'eval-source-map',
@@ -26,7 +26,6 @@ const webpack = {
   },
   plugins,
   devServer,
-  watch: true,
 };
 
 module.exports = webpack;
