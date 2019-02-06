@@ -11,7 +11,7 @@ O objetivo é avaliar o seu conhecimento e habilidades nos seguintes quesitos:
 * dependencias instaladas com yarn, `yarn install`
 * O projeto está com 2 branchs `vanilla`, com javascript puro e `react`
 * Digite `git checkout {nome da Branch}`
-* Rode a aplicação em **desnvolvimento** com `yarn start`. **não** gera bunbles
+* Rode a aplicação em **desnvolvimento** com `yarn start`. **não** gera bundles
 * Rode a aplicação em **produção** com `yarn build` para gerar o código real e então `yarn server`
 * Rode a `yarn test`. em ambas as branchs para testar os códigos.
 * A aplicação estará acessível através do endereço http://localhost:3000/
