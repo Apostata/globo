@@ -32,7 +32,6 @@ export default class Container extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { name, children } = this.props;
     const { isRowVisible, rows } = this.state;
 

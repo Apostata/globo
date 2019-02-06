@@ -7,16 +7,20 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    const result = fetch('/json').then(data => data.json());
-    result.then(data => this.setState({
-      data,
-    }));
+    const result = fetch('/json')
+      .then(data => data.json())
+      .catch(() => {});
+    result
+      .then(data => this.setState({
+        data,
+      }))
+      .catch(() => {});
   }
 
   render() {
     const { data } = this.state;
     const renderSections = (sections) => {
-      return sections.map((section, idx) =><Section key={idx} {...section} />);
+      return sections.map((section, idx) => <Section key={idx} {...section} />);
       // console.log(sections);
     };
     return (
